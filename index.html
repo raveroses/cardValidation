@@ -1,118 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Card Validation</title>
-    <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
-
-</head>
-<body>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="mother">
+      <!-- FIRST CONTENT FLEX -->
+      <div class="parentImage">
+        <img src="image/bg-main-desktop.png" alt="" />
 
-        <!-- FIRST CONTENT FLEX -->
-        <div class="parentImage">
-            <img src="image/bg-main-desktop.png" alt="">
-
-            <div class="firstImage">
-                <img src="image/bg-card-front.png" alt="front-card">
-            </div>
-            <div class="secondImage">
-                <img src="image/bg-card-back.png" alt="back-card">
-            </div>
-
-
-            <div class="ThirdImage">
-                <img src="image/card-logo.svg" alt="back-card">
-            </div>
-            
-            <div class="FirstContent">
-               <span>0000 0000 0000 0000</span>
-            </div>
-
-            <div class="ContentFlex">
-
-                <div class="firstContentFlex"><span>ODEKUNLE WARIS</span></div>
-                <div class="secondContentFlex"><span>00/00</span></div>
-                
-             </div>
-
-             <div class="ThirdContent">
-                <span>000</span>
-             </div>
-
-
+        <div class="firstImage">
+          <img src="image/bg-card-front.png" alt="front-card" />
+        </div>
+        <div class="secondImage">
+          <img src="image/bg-card-back.png" alt="back-card" />
         </div>
 
+        <div class="ThirdImage">
+          <img src="image/card-logo.svg" alt="back-card" />
+        </div>
 
-        <!-- SECOND FLEX -->
-        <div class="content">
+        <div class="FirstContent">
+          <span>0000 0000 0000 0000</span>
+        </div>
 
-            <!-- BEGINING OF FORM -->
-            <div class="form">
-               <form action="">
-                <label for="cardName">CARDHOLDER NAME</label>
-                <input type="text" class="cardName" id="cardName" name="cardName" placeholder="e.g. Odekunle Waris">
-               
-                <label for="cardNumber">CARD NUMBER</label>
-                <input type="text" id="cardNumber" class="cardNumber" name="cardNumber" placeholder="e.g. 1234 5678 9123 0000">
-            
+        <div class="ContentFlex">
+          <div class="firstContentFlex"><span>ODEKUNLE WARIS</span></div>
+          <div class="secondContentFlex">
+            <p>00/<span class="emergency">00</span></p>
+          </div>
+        </div>
 
+        <div class="ThirdContent">
+          <span>000</span>
+        </div>
+      </div>
 
-                
-                <div class="motherFlex">
+      <!-- SECOND FLEX -->
+      <div class="content">
+        <!-- BEGINING OF FORM -->
+        <div class="form">
+          <form action="">
+            <div class="sec">
+              <label for="cardName">CARDHOLDER NAME</label>
+              <input
+                type="text"
+                id="cardName"
+                name="cardName"
+                placeholder="e.g. Odekunle Waris"
+              />
+              <span class="message"></span>
+            </div>
+            <div class="sec">
+              <label for="cardNumber">CARD NUMBER</label>
+              <input
+                type="text"
+                id="cardNumber"
+                placeholder="e.g. 1234 5678 9123 0000"
+              />
+              <span class="messages"></span>
+            </div>
 
-                    <div class="firstFlex">
+            <div class="motherFlex">
+              <div class="firstFlex">
                 <label for="year/month">EXP. DATE (MM/YY)</label>
 
-
-
                 <div class="subFlex">
+                  <div class="firstSubFlex">
+                    <div class="sec">
+                      <input
+                        type="text"
+                        id="month"
+                        name="month"
+                        placeholder="MM"
+                      />
+                      <p class="mess"></p>
+                    </div>
+                  </div>
 
-                    <div class="firstSubFlex">
-                <input type="text" id="month" name="month" placeholder="MM">
+                  <div class="SecondSubFlex">
+                    <div class="sec">
+                      <input
+                        type="text"
+                        id="year"
+                        name="year"
+                        placeholder="YY"
+                      />
+                      <p class="messa"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- END OF THE FIRST ------ FLEX1 -->
+
+              <div class="SecondFlex">
+                <label for="cvc">CVC</label>
+                <div class="sec">
+                  <input
+                    type="text"
+                    id="cvc"
+                    name="cvc"
+                    placeholder="e.g. 123"
+                  />
+                  <p class="messa"></p>
+                </div>
+              </div>
             </div>
-
-
-            <div class="SecondSubFlex">
-                <input type="text" id="year" name="year" placeholder="YY">
-            </div>
-
-
+          </form>
+          <div class="confirm"><h3>Confirm</h3></div>
         </div>
-
-    </div>
-
-<!-- END OF THE FIRST ------ FLEX1 -->
-
-
-
-    <div class="SecondFlex">
-        <label for="cvc">CVC</label>
-        <input type="text" id="cvc" name="cvc" placeholder="e.g. 123">
-    
-    </div>
-
-
-
-            </div>
-            </form>
-            <div class="confirm"><h3>Confirm</h3></div>
-
-
-            </div>
-        
-      
-      
-        </div>
-
-
-
-
-
-
+      </div>
     </div>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

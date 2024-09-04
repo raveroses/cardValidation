@@ -1,185 +1,190 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body,html{
-    height: 100%;
-    font-family: 'Space Grotesk', sans-serif;
+body,
+html {
+  height: 100%;
+  font-family: "Space Grotesk", sans-serif;
 }
 
-.mother{
-display: flex;
-justify-content: flex-start;
-align-items: flex-start;
-align-content: flex-start;
+.mother {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
 }
 
-.parentImage{
-    position: relative;
+.parentImage {
+  position: relative;
 }
-.parentImage img{
-height:600px;
-width: 400px;
-}
-
-
-.firstImage{
-    position: absolute;
-    top:60px;
-    left:50px;
-}
-.firstImage img{
-    width:410px;
-    height: 240px;
+.parentImage img {
+  height: 600px;
+  width: 400px;
 }
 
-.secondImage{
-    position: absolute;
-    top:320px;
-    left:140px;
+.firstImage {
+  position: absolute;
+  top: 60px;
+  left: 50px;
+}
+.firstImage img {
+  width: 410px;
+  height: 240px;
 }
 
-
-.secondImage img{
-    width:410px;
-    height: 240px;
+.secondImage {
+  position: absolute;
+  top: 320px;
+  left: 140px;
 }
 
-.ThirdImage{
-    position: absolute;
-    top:90px;
-    left:80px;
+.secondImage img {
+  width: 410px;
+  height: 240px;
 }
 
-.ThirdImage img{
-    width:90px;
-    height: 50px;
+.ThirdImage {
+  position: absolute;
+  top: 90px;
+  left: 80px;
 }
 
-.FirstContent{
-    position: absolute;
-    top:220px;
-    left:80px; 
-}
-.FirstContent span{
-    color: hsl(270, 3%, 87%);
-    font-weight: 600;
-    font-size: 18px;
-    text-align: center;
-    letter-spacing: 6px;
+.ThirdImage img {
+  width: 90px;
+  height: 50px;
 }
 
-.ContentFlex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    position: absolute;
-    top:260px;
-    left:80px; 
+.FirstContent {
+  position: absolute;
+  top: 220px;
+  left: 80px;
+}
+.FirstContent span {
+  color: hsl(270, 3%, 87%);
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 6px;
+  word-spacing: 1px;
 }
 
+.ContentFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  top: 260px;
+  left: 80px;
+}
 
 .ContentFlex .firstContentFlex {
-    padding-right: 165px;
+  padding-right: 165px;
 }
-.ContentFlex .firstContentFlex span{
-    color: hsl(270, 3%, 87%);
-    font-size: 13px;
-    font-weight: 500;
-}
-
-.ContentFlex .secondContentFlex span{
-    color: hsl(270, 3%, 87%);  
-    font-size: 13px;
-    font-weight: 500;
+.ContentFlex .firstContentFlex span {
+  color: hsl(270, 3%, 87%);
+  font-size: 13px;
+  font-weight: 500;
 }
 
-.ThirdContent{
-    position: absolute;
-    top:430px;
-    left:470px; 
+.ContentFlex .secondContentFlex p {
+  color: hsl(270, 3%, 87%);
+  font-size: 13px;
+  font-weight: 500;
 }
 
-.ThirdContent span{
-    color: hsl(270, 3%, 87%);  
-    font-size: 13px;
-    font-weight: 500;
+.ContentFlex .secondContentFlex span {
+  color: hsl(270, 3%, 87%);
+  font-size: 13px;
+  font-weight: 500;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-.content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+.ThirdContent {
+  position: absolute;
+  top: 430px;
+  left: 470px;
 }
 
-.form{
-    /* text-align: center; */
-    margin: 100px 180px;
-    padding:100px 90px;
-    width:450px;
+.ThirdContent span {
+  color: hsl(270, 3%, 87%);
+  font-size: 13px;
+  font-weight: 500;
 }
 
-.form input{
-    width:350px;
-    padding:10px 24px;
-    margin-bottom: 15px;
-     border-radius: 5px;
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
-.motherFlex{
-    display: flex;
-    padding-top:15px ;
+.form {
+  /* text-align: center; */
+  margin: 100px 180px;
+  padding: 100px 90px;
+  width: 450px;
 }
 
-.subFlex{
-    display: flex;
+.form input {
+  width: 350px;
+  padding: 10px 24px;
+  border-radius: 5px;
 }
 
-
-.firstSubFlex{
-    padding-right: 10px;
+.sec {
+  margin-bottom: 15px;
 }
-.firstSubFlex input{
-    width:80px;
-    border-radius: 5px;
-}
-.SecondSubFlex input{
-    width:80px;
-    border-radius: 5px;
+.message {
+  font-size: 13px;
 }
 
-.SecondFlex{
-    padding-left: 10px;
+.mess {
+  font-size: 10px;
 }
-.SecondFlex input{
-    width: 170px;
-    border-radius: 5px;
+.messages {
+  font-size: 13px;
 }
-
-.confirm{
-    background-color: hsl(278, 68%, 11%);
-    padding: 10px 25px;
-    border-radius: 5px;
+.motherFlex {
+  display: flex;
+  padding-top: 15px;
 }
 
-.confirm h3{
-    color: hsl(0, 0%, 100%);
-    text-align: center;
-    font-size: 15px;
+.subFlex {
+  display: flex;
+}
+
+.firstSubFlex {
+  padding-right: 10px;
+}
+.firstSubFlex input {
+  width: 80px;
+  border-radius: 5px;
+}
+.SecondSubFlex input {
+  width: 80px;
+  border-radius: 5px;
+}
+
+.SecondFlex {
+  padding-left: 10px;
+}
+.SecondFlex input {
+  width: 170px;
+  border-radius: 5px;
+}
+
+.confirm {
+  background-color: hsl(278, 68%, 11%);
+  padding: 10px 25px;
+  border-radius: 5px;
+}
+
+.confirm h3 {
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  font-size: 15px;
 }

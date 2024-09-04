@@ -4,8 +4,8 @@ let cardName = document.querySelector("#cardName");
 let cardNumber = document.querySelector("#cardNumber");
 let firstContent = document.querySelector(".FirstContent span");
 const firstContentFlex = document.querySelector(".firstContentFlex span");
-let secondContentFlex = document.querySelector(".secondContentFlex span");
-let secondContentFlexP = document.querySelector(".secondContentFlex p");
+let secondContentFlex = document.querySelector(".para p");
+let emergencyP = document.querySelector(".emergency");
 let thirdContent = document.querySelector(".ThirdContent");
 
 const month = document.querySelector("#month");
@@ -15,6 +15,8 @@ const message = document.querySelector(".message");
 const messages = document.querySelector(".messages");
 const confirm = document.querySelector(".confirm");
 const mess = document.querySelector(".mess");
+const messa = document.querySelector(".messa");
+const messag = document.querySelector(".messag");
 function CardDetails() {
   const nameInput = cardName.value.trim();
   message.textContent = "";
@@ -84,14 +86,63 @@ function getDate(arr) {
   }
 }
 
+function getYear() {
+  const yearValue = year.value;
+
+  emergencyP.textContent = yearValue;
+  messa.textContent = "";
+
+  if (yearValue === "") {
+    messa.textContent = "⛔You Input Nothing";
+    messa.style.color = "red";
+  } else if (isNaN(Number(yearValue))) {
+    messa.textContent = "⛔Wrong Format,numbers Only";
+    messa.style.color = "red";
+    return;
+  } else if (!yearValue.charAt(0).startsWith("2")) {
+    messa.textContent = "⛔Wrong Format,numbers Only";
+    messa.style.color = "red";
+    return;
+  } else if (yearValue.length !== 2) {
+    messa.textContent = "⛔Check Numbers";
+    messa.style.color = "red";
+    return;
+  } else {
+    messa.textContent = "";
+  }
+}
+
+function getCVC() {
+  const cv = cvc.value;
+
+  thirdContent.textContent = cv;
+  messag.textContent = "";
+
+  if (cv === "") {
+    messag.textContent = "⛔You Input Nothing";
+    messag.style.color = "red";
+  } else if (isNaN(Number(cv))) {
+    messag.textContent = "⛔Wrong Format,numbers Only";
+    messag.style.color = "red";
+  } else if (cv.length !== 3) {
+    messag.textContent = "⛔Check Numbers";
+    messag.style.color = "red";
+    return;
+  } else {
+    messag.textContent = "";
+  }
+}
 // confirm.addEventListener("click", (e) => {
 //   e.preventDefault();
 // });
 
 document.addEventListener("DOMContentLoaded", function () {
   cardNumber.addEventListener("input", CardNumbers),
-    cardName.addEventListener("input", CardDetails);
-  month.addEventListener("input", () => {
-    getDate(array);
-  });
+    cardName.addEventListener("input", CardDetails),
+    month.addEventListener("input", () => {
+      getDate(array);
+    });
+
+  year.addEventListener("input", getYear);
+  cvc.addEventListener("input", getCVC);
 });

@@ -90,13 +90,19 @@ html {
   font-weight: 500;
 }
 
-.ContentFlex .secondContentFlex p {
+.secondContentFlex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+.ContentFlex .secondContentFlex .para p {
   color: hsl(270, 3%, 87%);
   font-size: 13px;
   font-weight: 500;
 }
 
-.ContentFlex .secondContentFlex span {
+.ContentFlex .secondContentFlex .span {
   color: hsl(270, 3%, 87%);
   font-size: 13px;
   font-weight: 500;
@@ -139,14 +145,20 @@ html {
   margin-bottom: 15px;
 }
 .message {
-  font-size: 13px;
+  font-size: 10px;
+}
+.messa {
+  font-size: 10px;
 }
 
+.messag {
+  font-size: 10px;
+}
 .mess {
   font-size: 10px;
 }
 .messages {
-  font-size: 13px;
+  font-size: 10px;
 }
 .motherFlex {
   display: flex;

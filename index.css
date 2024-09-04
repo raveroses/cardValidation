@@ -200,3 +200,40 @@ html {
   text-align: center;
   font-size: 15px;
 }
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  margin-left: 350px;
+  margin-top: 200px;
+}
+
+.modal img {
+  width: 70px;
+  margin-left: 80px;
+  padding-bottom: 19px;
+}
+
+.modal-content {
+  text-align: center;
+}
+.modal-content h2 {
+  font-size: 20px;
+}
+
+.modal-content p {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.continue {
+  background-color: hsl(278, 68%, 11%);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.continue p {
+  color: hsl(0, 0%, 100%);
+  padding: 7px 15px;
+}

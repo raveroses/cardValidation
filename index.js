@@ -17,6 +17,10 @@ const confirm = document.querySelector(".confirm");
 const mess = document.querySelector(".mess");
 const messa = document.querySelector(".messa");
 const messag = document.querySelector(".messag");
+
+const content = document.querySelector(".content");
+const modal = document.querySelector(".modal");
+
 function CardDetails() {
   const nameInput = cardName.value.trim();
   message.textContent = "";
@@ -35,11 +39,9 @@ function CardDetails() {
 
 function CardNumbers() {
   const cardNumberValue = cardNumber.value.trim();
-  messages.textContent = "";
 
   firstContent.textContent = cardNumberValue;
 
-  console.log(cardNumberValue);
   if (cardNumberValue === "") {
     messages.textContent = "⛔You Input Nothing";
     messages.style.color = "red";
@@ -87,7 +89,7 @@ function getDate(arr) {
 }
 
 function getYear() {
-  const yearValue = year.value;
+  const yearValue = year.value.trim();
 
   emergencyP.textContent = yearValue;
   messa.textContent = "";
@@ -99,8 +101,8 @@ function getYear() {
     messa.textContent = "⛔Wrong Format,numbers Only";
     messa.style.color = "red";
     return;
-  } else if (!yearValue.charAt(0).startsWith("2")) {
-    messa.textContent = "⛔Wrong Format,numbers Only";
+  } else if (yearValue.charAt(0) !== "2") {
+    messa.textContent = "⛔Year must start with '2'";
     messa.style.color = "red";
     return;
   } else if (yearValue.length !== 2) {
@@ -113,17 +115,18 @@ function getYear() {
 }
 
 function getCVC() {
-  const cv = cvc.value;
+  const cv = cvc.value.trim();
 
   thirdContent.textContent = cv;
-  messag.textContent = "";
 
   if (cv === "") {
     messag.textContent = "⛔You Input Nothing";
     messag.style.color = "red";
+    return;
   } else if (isNaN(Number(cv))) {
     messag.textContent = "⛔Wrong Format,numbers Only";
     messag.style.color = "red";
+    return;
   } else if (cv.length !== 3) {
     messag.textContent = "⛔Check Numbers";
     messag.style.color = "red";
@@ -145,4 +148,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   year.addEventListener("input", getYear);
   cvc.addEventListener("input", getCVC);
+});
+
+function Confirm() {
+  if (content) {
+    content.classList.add("hidden");
+    modal.classList.remove("hidden");
+  }
+}
+
+confirm.addEventListener("click", () => {
+  CardNumbers();
+  CardDetails();
+  getYear();
+  getCVC();
+  Confirm();
 });
